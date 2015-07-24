@@ -1,0 +1,351 @@
+/* css styles for forms */
+
+@charset "UTF-8";
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+* {
+	box-sizing: border-box;
+}
+body {
+	margin:0;
+	padding:0;
+	height: 100%;
+
+}
+html {
+	height: 100%;
+
+}
+/*side left slideout*/
+.wbs-container {
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	width: 350px;
+	position: fixed;
+	top: 20%;
+	background: white;
+	border: 1px solid #848484;
+	-webkit-box-shadow: 2px 2px 20px 4px #ADADAD;
+	-moz-box-shadow: 2px 2px 20px 4px #ADADAD;
+	-o-box-shadow: 2px 2px 20px 4px #ADADAD;
+	box-shadow: 2px 2px 20px 4px #ADADAD;
+	-webkit-transition-duration:0.3s;
+	-moz-transition-duration:0.3s;
+	-o-transition-duration:0.3s;
+	transition-duration:0.3s;
+	-webkit-transform: translate3d(-300px,0,0);
+	-moz-transform: translate3d(-300px,0,0);
+	-o-transform: translate3d(-300px,0,0);
+	transform: translate3d(-300px,0,0);
+}
+.wbs-container.active {
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-o-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+} 
+.wbs-switch {
+	margin: 0;
+	width:60px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+	-webkit-transition-duration:0.3s;
+	-moz-transition-duration:0.3s;
+	-o-transition-duration:0.3s;
+	transition-duration:0.3s;
+}
+.wbs-switch-msg {
+	
+	
+	
+}
+.wbs-switch-msg:hover {
+	background: rgb(255, 145, 0);
+}
+
+.wbs-form {
+	padding: 10px;
+	width: 284px;
+	min-height: 323px;
+}
+.wbs-form .wbs-msg {
+	margin-bottom: 20px;
+	font-size: 0.95em;
+}
+.wbs-form input, .wbs-form select{
+	display: block;
+	width: 260px;
+	margin:18px 0;
+	height: 35px;
+	-ms-box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+	-webkit-box-sizing:border-box; 
+	box-sizing:border-box;
+	padding: 0 5px;
+}
+.wbs-form input[type="tel"] {
+	padding-left: 40px;
+}
+.wbs-form input[type="button"] {
+	background: blue;
+	color:white;
+	height: 40px;
+	width: 120px;
+	font-weight: 600;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	border: none;
+	cursor: pointer;
+	-webkit-transition-duration:0.3s;
+	-moz-transition-duration:0.3s;
+	-o-transition-duration:0.3s;
+	transition-duration:0.3s;
+	margin:0 auto;
+}
+.wbs-form input[type="button"]:hover {
+	background: rgb(0, 0, 178);
+}
+.wbs-footer {
+	color: #7E7E7E;
+	padding:5px;
+	background: #c6c6c6;
+	width:288px;
+}
+.wbs-footer .wbs-poweredby {
+	height: 40px;
+	line-height: 40px;
+	font-size: 0.8em;
+	
+}
+.wbs-footer .wbs-poweredby img {
+	width:112px;
+	margin-left: 0px;
+	vertical-align: middle;
+}
+.wbs-formerror {
+	font-size: 0.8em;
+	color: red;
+	margin-top: -18px;
+	float: left;
+}
+
+/*wbs Status messages */
+.wbs-container .wbs-window{
+	overflow: hidden;
+}
+.wbs-container .wbs-livestatus{
+	visibility: hidden;
+	height: 0;
+	overflow: hidden;
+	text-align: center;
+	margin-top:0;
+}
+.wbs-container.connecting .wbs-window, .wbs-container.connected .wbs-window,
+.wbs-container.verifying .wbs-window, .wbs-container.verification-success .wbs-window,
+.wbs-container.verification-failed .wbs-window, .wbs-container.in-progress .wbs-window,
+.wbs-container.completed .wbs-window, .wbs-container.ended .wbs-window,
+.wbs-container.agent-busy .wbs-window, .wbs-container.oops .wbs-window{
+	visibility: hidden;
+	height: 0;
+	overflow: hidden;
+}
+
+.wbs-container.connecting .wbs-livestatus, .wbs-container.connected .wbs-livestatus,
+.wbs-container.verifying .wbs-livestatus, .wbs-container.verification-success .wbs-livestatus,
+.wbs-container.verification-failed .wbs-livestatus, .wbs-container.in-progress .wbs-livestatus,
+.wbs-container.completed .wbs-livestatus, .wbs-container.ended .wbs-livestatus,
+.wbs-container.agent-busy .wbs-livestatus, .wbs-container.oops .wbs-livestatus{
+	visibility: visible;
+	height: auto;
+	margin-top: 30px;
+}
+.wbs-container .wbs-livemsg-connecting, .wbs-container .wbs-livemsg-connected,
+.wbs-container .wbs-livemsg-verifying, .wbs-container .wbs-livemsg-verification-success,
+.wbs-container .wbs-livemsg-verification-failed, .wbs-container .wbs-livemsg-in-progress,
+.wbs-container .wbs-livemsg-completed, .wbs-container .wbs-livemsg-ended,
+.wbs-container .wbs-livemsg-agent-busy, .wbs-container .wbs-livemsg-oops, .wbs-container .wbs-livemsg-timer {
+	display: none;
+}
+.wbs-container.connecting .wbs-livemsg-connecting {
+	display: inherit;
+}
+.wbs-container.connected .wbs-livemsg-connected {
+	display: inherit;
+}
+.wbs-container.verifying .wbs-livemsg-verifying {
+	display: inherit;
+}
+.wbs-container.verification-success .wbs-livemsg-verification-success {
+	display: inherit;
+}
+.wbs-container.in-progress .wbs-livemsg-timer {
+	display: inherit;
+}
+.wbs-container.completed .wbs-livemsg-timer {
+	display: inherit;
+}
+.wbs-container.verification-failed .wbs-livemsg-verification-failed {
+	display: inherit;
+}
+.wbs-container.in-progress .wbs-livemsg-in-progress {
+	display: inherit;
+}
+.wbs-container.completed .wbs-livemsg-completed {
+	display: inherit;
+}
+.wbs-container.ended .wbs-livemsg-ended {
+	display: inherit;
+}
+.wbs-container.agent-busy .wbs-livemsg-agent-busy {
+	display: inherit;
+}
+.wbs-container.oops .wbs-livemsg-oops {
+	display: inherit;
+}
+.wbs-container .wbs-verificationcode {
+	margin-top: 20px;
+	font-size: 1.5em;
+	font-weight: 600;
+	color: crimson;
+}
+
+/* theme peter-river*/
+.wbs-container.theme-peter-river .wbs-switch {
+	background: #3498db url('../img/callme.png') center no-repeat;
+}
+.wbs-container.theme-peter-river .wbs-switch:hover {
+	background: #2980b9 url('../img/callme.png') center no-repeat;
+}
+.wbs-container.theme-peter-river input[type="button"] {
+	background: #3498db;
+}
+.wbs-container.theme-peter-river input[type="button"]:hover {
+	background: #2980b9;
+}
+.wbs-container.theme-peter-river .wbs-footer {
+	background: #D7E3EC;
+}
+
+/* theme amethyst*/
+.wbs-container.theme-amethyst .wbs-switch {
+	background: #9b59b6 url('../img/callme.png') center no-repeat;;
+}
+.wbs-container.theme-amethyst .wbs-switch:hover {
+	background: #8e44ad url('../img/callme.png') center no-repeat;;
+}
+.wbs-container.theme-amethyst input[type="button"] {
+	background: #9b59b6;
+}
+.wbs-container.theme-amethyst input[type="button"]:hover {
+	background: #8e44ad;
+}
+.wbs-container.theme-amethyst .wbs-footer {
+	background: #F6E0FF;
+}
+
+/* theme wet-asphalt*/
+.wbs-container.theme-wet-asphalt .wbs-switch {
+	background: #34495e url('../img/callme.png') center no-repeat;;
+}
+.wbs-container.theme-wet-asphalt .wbs-switch:hover {
+	background: #2c3e50 url('../img/callme.png') center no-repeat;;
+}
+.wbs-container.theme-wet-asphalt input[type="button"] {
+	background: #34495e;
+}
+.wbs-container.theme-wet-asphalt input[type="button"]:hover {
+	background: #2c3e50;
+}
+.wbs-container.theme-wet-asphalt .wbs-footer {
+	background: #E2E2E2;
+}
+
+/* theme emerald*/
+.wbs-container.theme-emerald .wbs-switch {
+	background: #2ecc71 url('../img/callme.png') center no-repeat;;
+}
+.wbs-container.theme-emerald .wbs-switch:hover {
+	background: #27ae60 url('../img/callme.png') center no-repeat;;
+}
+.wbs-container.theme-emerald input[type="button"] {
+	background: #2ecc71;
+}
+.wbs-container.theme-emerald input[type="button"]:hover {
+	background: #27ae60;
+}
+.wbs-container.theme-emerald .wbs-footer {
+	background: #E6F9EE;
+}
+
+/* theme turquoise*/
+.wbs-container.theme-turquoise .wbs-switch {
+	background: #1abc9c url('../img/callme.png') center no-repeat;;
+}
+.wbs-container.theme-turquoise .wbs-switch:hover {
+	background: #16a085 url('../img/callme.png') center no-repeat;;
+}
+.wbs-container.theme-turquoise input[type="button"] {
+	background: #1abc9c;
+}
+.wbs-container.theme-turquoise input[type="button"]:hover {
+	background: #16a085;
+}
+.wbs-container.theme-turquoise .wbs-footer {
+	background: #ECFAF7;
+}
+
+/* theme carrot*/
+.wbs-container.theme-carrot .wbs-switch {
+	background: #e67e22 url('../img/callme.png') center no-repeat;;
+}
+.wbs-container.theme-carrot .wbs-switch:hover {
+	background: #d35400 url('../img/callme.png') center no-repeat;;
+}
+.wbs-container.theme-carrot input[type="button"] {
+	background: #e67e22;
+}
+.wbs-container.theme-carrot input[type="button"]:hover {
+	background: #d35400;
+}
+.wbs-container.theme-carrot .wbs-footer {
+	background: #FFF4EA;
+}
+
+/* theme alizarin*/
+.wbs-container.theme-alizarin .wbs-switch {
+	background: #e74c3c url('../img/callme.png') center no-repeat;;
+}
+.wbs-container.theme-alizarin .wbs-switch:hover {
+	background: #c0392b url('../img/callme.png') center no-repeat;;
+}
+.wbs-container.theme-alizarin input[type="button"] {
+	background: #e74c3c;
+}
+.wbs-container.theme-alizarin input[type="button"]:hover {
+	background: #c0392b;
+}
+.wbs-container.theme-alizarin .wbs-footer {
+	background: #FFF0EF;
+}
+
+/* theme sunflower*/
+.wbs-container.theme-sunflower .wbs-switch {
+	background: #f1c40f url('../img/callme.png') center no-repeat;;
+	color: rgb(63, 63, 64);
+}
+.wbs-container.theme-sunflower .wbs-switch:hover {
+	background: #f39c12 url('../img/callme.png') center no-repeat;;
+}
+.wbs-container.theme-sunflower input[type="button"] {
+	background: #f1c40f;
+	color: rgb(63, 63, 64);
+}
+.wbs-container.theme-sunflower input[type="button"]:hover {
+	background: #f39c12;
+}
+.wbs-container.theme-sunflower .wbs-footer {
+	background: #FDF6D9;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Waybeo Calls Demo: Slide Out Widget</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/intlTelInput.css">
+        <link rel="stylesheet" href="css/slideout.css">
+        <link rel="stylesheet" href="css/slideout-demopage.css">
+    </head>
+    <body>
+        <header>
+            <a href="http://waybeo.com" style="float:left"><img src="img/waybeo_logo.png" alt="Waybeo" style="vertical-align: middle; width:90%;"></a>
+            <h2>Call Demos </h2>
+            <div class="downloader"><a href="javascript{}">Download Demos</a></div>
+            <div class="clear"></div>
+        </header>
+
+
+        <div class="nav">
+
+            <h2> Slide Out Widget</h2>
+            <a href="http://www.waybeo.com">Home</a> / <a href="http://www.waybeo.com/demos">Demos</a> / <a href="javascript:{}">Slide Out Widget</a>
+        </div>
+        <section class="main">
+            <h3>Please the color theme for the plugin</h3>
+            <select class="themeselector">
+                <option class="peter-river" value="theme-peter-river">Peter-river</option>
+                <option class="amethyst" value="theme-amethyst">Amethyst</option>
+                <option class="wet-asphalt" value="theme-wet-asphalt">Wet Asphalt</option>
+                <option class="emerald" value="theme-emerald">Emerald</option>
+                <option class="turquoise" value="theme-turquoise">Turquoise</option>
+                <option class="alizarin" value="theme-alizarin">Alizarin</option>
+                <option class="carrot" value="theme-carrot">Carrot</option>
+                <option class="sunflower" value="theme-sunflower">Sun Flower</option>
+
+            </select>
+            <h3>Please click the button to the left of the screen</h3>
+
+
+        </section>
+        <div class="wbs-container theme-peter-river">
+            <div class="wbs-switch">
+                <!--Use the css background property to change this image-->
+            </div>
+            <div class="wbs-form">
+                <div class="wbs-window">
+                    <div class="wbs-msg">
+                        Learn how to use call intelligence and analytics to increase your phone lead generation.
+                    </div>
+                    <input type="text" class="wbpb-name"  name="name"  placeholder="First Name">
+                    <!--<div class="wbs-formerror">Please enter a valid Name</div>-->
+                    <input type="email" class="wbpb-email"  name="email"  placeholder="Email">
+                    <!--<div class="wbs-formerror">Please enter a valid email id</div>-->
+                    <input type="tel" class="wbpb-tbox"  name="mobile" id="slideoutMobile" placeholder="Phone Number">
+                    <!--<div class="wbs-formerror">Please enter a valid phone number</div>-->
+                    <select id="projectSelector" placeholder="Select Project">
+                        <option>--Select Project--</option>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                    </select>
+                    <!--<div class="wbs-formerror">Please select an option</div>-->
+                    <input class="wbs-btn" type="button" value="Call Me" id="slideoutCallMe">
+                </div>
+                <div class="wbs-livestatus">
+                    <div class="wbs-livemsg-connecting">
+                        Connecting now...
+                    </div>
+                    <div class="wbs-livemsg-connected">
+                        Connection Established.
+                    </div>
+                    <div class="wbs-livemsg-verifying">
+                        Please verify your number using the code below.
+                        <div class="wbs-verificationcode">
+                            11001
+                        </div>
+                    </div>
+                    <div class="wbs-livemsg-verification-success">
+                        Number verification successful
+                    </div>
+                    <div class="wbs-livemsg-verification-failed">
+                        Number verification failed.
+                    </div>
+                    <div class="wbs-livemsg-in-progress">
+                        Call in progress.
+                    </div>
+                    <div class="wbs-livemsg-completed">
+                        Call Completed Successfully.
+                    </div>
+                    <div class="wbs-livemsg-ended">
+                        Call ended.
+                    </div>
+                    <div class="wbs-livemsg-agent-busy">
+                        Agent busy.
+                    </div>
+                    <div class="wbs-livemsg-oops">
+                        Oops! Something went wrong.
+                    </div>
+                    <div class="wbs-livemsg-timer timer">
+                        00:00:00
+                    </div>
+                </div>
+            </div>
+            <div class="wbs-footer">
+                <div class="wbs-poweredby"><a href="http://waybeo.com" target="_blank"><img src="img/waybeo-horizontal.png"></a></div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="js/intlTelInput.min.js"></script>
+        <script type="text/javascript" src="http://js.waybeo.com/v0.1-beta2/waybeo.min.js"></script>
+        <script type="text/javascript" src="js/slideout.js"></script>
+    </body>
+</html>

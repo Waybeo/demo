@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Waybeo Calls Demo: Exit Intent Trigger</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/intlTelInput.css">
+        <link rel="stylesheet" href="css/exit-intent.css">
+        <link rel="stylesheet" href="css/exit-intent-demopage.css">
+    </head>
+    <body>
+        <header>
+            <a href="http://waybeo.com" style="float:left"><img src="img/waybeo_logo.png" alt="Waybeo" style="vertical-align: middle; width:90%;"></a>
+            <h2>Call Demos </h2>
+            <div class="downloader"><a href="javascript:{}">Download Demos</a></div>
+            <div class="clear"></div>
+        </header>
+
+
+        <div class="nav">
+
+            <h2> Exit Intent Trigger</h2>
+            <a href="http://www.waybeo.com">Home</a> / <a href="http://www.waybeo.com/demos">Demos</a> / <a href="javascript:{}">exit-intent</a>
+        </div>
+        <section class="main">
+            <h3>Keep your mouse here or anywhere in the screen area.</h3>
+            <h4 class="loadingmsg" style="font-weight: 300;">Loading in <span class="timermsg">5</span> seconds</h4>
+            <a href="exit-intent.html" class="retrybutton" style="display: none;">Retry</a>
+
+        </section>
+        <div class="exitwatch">
+            <img src="img/red-arrow.png">
+            <div class="watchtext">Close Window</div>
+
+        </div>
+        <div class="wbp-screen">
+            <div class="wbp-container">
+                <div class="wbp-close">x</div>
+                <div class="wbp-main">
+                    <div class="wbp-mainline">
+                        Do you want the <br /><span class="wbp-semibold">power of Calls to convert</span><br /> <span class="wbp-bold">Visits into Revenue?</span>
+                    </div>
+                    <div class="wbp-form">
+                        <div class="wbp-actions active">
+                            <button class="yesconnect ">Yes<span>Connect Me to an expert</span></button> or
+                            <button class="noconnect ">No<span>I don't talk to my customer</span></button>
+                        </div>
+                        <div class="wbp-window">
+                            <div class="wbp-inputs">
+                                <input type="tel" class="wbpb-tbox" name="mobile" id="exitMobile" placeholder="Enter Phone Number"><input class="wbpb-btn" type="button" value="Call Me" id="exitCallMe">
+                                <!--<div class="wbp-formerror">Please enter a valid phone number</div>-->
+                            </div>
+                        </div>
+                        <div class="wbp-livestatus">
+                            <div class="wbp-livemsg-connecting">
+                                Connecting now...
+                            </div>
+                            <div class="wbp-livemsg-connected">
+                                Connection Established.
+                            </div>
+                            <div class="wbp-livemsg-verifying">
+                                Please verify your number using the code below.
+                                <div class="wbp-verificationcode">
+                                    11001
+                                </div>
+                            </div>
+                            <div class="wbp-livemsg-verification-success">
+                                Number verification successful
+                            </div>
+                            <div class="wbp-livemsg-verification-failed">
+                                Number verification failed.
+                            </div>
+                            <div class="wbp-livemsg-in-progress">
+                                Call in progress.
+                            </div>
+                            <div class="wbp-livemsg-completed">
+                                Call Completed Successfully.
+                            </div>
+                            <div class="wbp-livemsg-ended">
+                                Call ended.
+                            </div>
+                            <div class="wbp-livemsg-agent-busy">
+                                Agent busy.
+                            </div>
+                            <div class="wbp-livemsg-oops">
+                                Oops! Something went wrong.
+                            </div>
+                            <div class="wbp-livemsg-timer timer">
+                                00:00:00
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="js/intlTelInput.min.js"></script>
+        <script type="text/javascript" src="http://js.waybeo.com/v0.1-beta2/waybeo.min.js"></script>
+        <script type="text/javascript" src="js/exit-intent.js"></script>
+    </body>
+</html>

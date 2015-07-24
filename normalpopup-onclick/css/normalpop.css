@@ -1,0 +1,530 @@
+/* css styles for forms */
+
+@charset "UTF-8";
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+* {
+	box-sizing: border-box;
+}
+body {
+	margin:0;
+	padding:0;
+	height: 100%;
+	
+}
+html {
+	height: 100%;
+
+}
+.wbf-clear {
+	clear: both;
+}
+.wbf-screen {
+	opacity: 0;
+	z-index: -1000;
+	margin:0;
+	padding:0;
+	width: 100%;
+	height: 100%;
+	background: rgba(148, 148, 148, 0.5);
+	position: fixed;
+	top:0;
+	-webkit-transition-duration:0.3s;
+	-moz-transition-duration:0.3s;
+	-o-transition-duration:0.3s;
+	transition-duration:0.3s;
+}
+.wbf-screen.active {
+	opacity: 1;
+	z-index: 10000;
+}
+.wbf-container {
+	opacity: 0;
+	z-index: -1000;
+	width:40%;
+	background: #ffffff;
+	position: absolute;
+	left: 30%;
+	top: 100px;
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	-webkit-box-shadow: 2px 2px 20px 4px rgba(108, 108, 108, 0.59);
+	-moz-box-shadow: 2px 2px 20px 4px rgba(108, 108, 108, 0.59);
+	-o-box-shadow: 2px 2px 20px 4px rgba(108, 108, 108, 0.59);
+	box-shadow: 2px 2px 20px 4px rgba(108, 108, 108, 0.59);
+	-webkit-transition-duration:0.3s;
+	-moz-transition-duration:0.3s;
+	-o-transition-duration:0.3s;
+	transition-duration:0.3s;
+	-webkit-transform: translate3d(0,-100px,0);
+	-moz-transform: translate3d(0,-100px,0);
+	-o-transform: translate3d(0,-100px,0);
+	transform: translate3d(0,-100px,0);
+}
+.wbf-container.active {
+	opacity: 1;
+	z-index: 10000;
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-o-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+.wbf-header {
+	padding:20px 30px;
+	background: blue;
+}
+.wbf-header .wbf-mainheader {
+	font-size: 1.6em;
+	color: white;
+	float: left;
+}
+
+.wbf-header .wbf-availability {
+	float:right;
+}
+.wbf-header .wbf-availability .wbf-availability-icon{
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+	background: rgb(0, 236, 0);
+	display: inline-block;
+}
+.wbf-header .wbf-availability .wbf-availability-msg{
+	font-size: 1em;
+	line-height: 2em;
+	font-weight: 200;
+	display: inline-block;
+}
+.wbf-header .wbf-availability.available .wbf-availability-msg{
+	color: rgb(0, 236, 0);
+}
+
+.wbf-form {
+	padding: 30px;
+	min-height: 248px;
+	overflow: visible;
+	
+}
+.wbf-form .wbf-status {
+	margin-bottom: 20px;
+}
+.wbf-form .wbf-status .wbf-message {
+	font-size: 1em;
+}
+.wbf-form .wbf-status .wbf-message.wbf-centered {
+	text-align: center;
+	display: block;
+}
+.wbf-form .intl-tel-input {
+	width:100%;
+	padding-left: 10%;
+}
+.wbf-form .wbf-numberinput {
+	width: 80%;
+	height: 40px;
+	background: #f2f2f2;
+	-webkit-transition-duration:0.3s;
+	-moz-transition-duration:0.3s;
+	-o-transition-duration:0.3s;
+	transition-duration:0.3s;
+	border: 1px solid #c3c3c3;
+	 padding-left: 40px;
+}
+.wbf-form .wbf-numberinput:hover {
+	background: white;
+	border: 1px solid gray;
+}
+.wbf-form .wbf-numberinput:focus {
+	background: white;
+}
+.wbf-form .wbf-formerror {
+	font-size: 0.8em;
+	color: red;
+	margin-left: 10%;
+	margin-top: 5px;
+	float: left;
+}
+.wbf-form .wbf-privacy {
+	margin-top: 25px;
+	text-align: center;
+	font-size: 0.75em;
+	color:#969696;
+}
+.wbf-form .wbf-submit input {
+	width:auto;
+	color: white;
+	font-weight: 600;
+	background: rgb(108, 108, 255);
+	text-transform: uppercase;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	/*background: rgb(221, 221, 221);*/
+	height: 40px;
+	margin:15px auto 0px auto;
+	padding: 0 20px;
+	display: block;
+	border: 1px solid rgb(157, 157, 157);
+	cursor: pointer;
+	-webkit-transition-duration:0.3s;
+	-moz-transition-duration:0.3s;
+	-o-transition-duration:0.3s;
+	transition-duration:0.3s;
+}
+.wbf-form .wbf-submit input:hover {
+	background: blue;
+	color:white;
+}
+.wbf-footer {
+	padding: 20px 30px;
+	font-size: 0.8em;
+	background: #D1DBFA;
+	color: #7E7E7E;
+}
+.wbf-footer .wbf-poweredby {
+	float: left;
+	width: 130px;
+	height: 18px;
+}
+.wbf-footer .wbf-poweredby img {
+	width: 112px;
+	-webkit-transform: translate3d(-23px,-10px,0);
+	-moz-transform: translate3d(-23px,-10px,0);
+	-o-transform: translate3d(-23px,-10px,0);
+	transform: translate3d(-23px,-10px,0);
+	float: right;
+}
+.wbf-footer .wbf-close {
+	float: right;
+}
+.wbf-footer .wbf-close:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+/*wbf Status messages */
+.wbf-container .wbf-window{
+	overflow: visible;
+}
+.wbf-container .wbf-livestatus{
+	visibility: hidden;
+	height: 0;
+	overflow: hidden;
+	text-align: center;
+}
+.wbf-container.connecting .wbf-window, .wbf-container.connected .wbf-window,
+.wbf-container.verifying .wbf-window, .wbf-container.verification-success .wbf-window,
+.wbf-container.verification-failed .wbf-window, .wbf-container.in-progress .wbf-window,
+.wbf-container.completed .wbf-window, .wbf-container.ended .wbf-window,
+.wbf-container.agent-busy .wbf-window, .wbf-container.oops .wbf-window{
+	visibility: hidden;
+	height: 0;
+	overflow: hidden;
+}
+
+.wbf-container.connecting .wbf-livestatus, .wbf-container.connected .wbf-livestatus,
+.wbf-container.verifying .wbf-livestatus, .wbf-container.verification-success .wbf-livestatus,
+.wbf-container.verification-failed .wbf-livestatus, .wbf-container.in-progress .wbf-livestatus,
+.wbf-container.completed .wbf-livestatus, .wbf-container.ended .wbf-livestatus,
+.wbf-container.agent-busy .wbf-livestatus, .wbf-container.oops .wbf-livestatus{
+	visibility: visible;
+	height: auto;
+}
+.wbf-container .wbf-livemsg-connecting, .wbf-container .wbf-livemsg-connected,
+.wbf-container .wbf-livemsg-verifying, .wbf-container .wbf-livemsg-verification-success,
+.wbf-container .wbf-livemsg-verification-failed, .wbf-container .wbf-livemsg-in-progress,
+.wbf-container .wbf-livemsg-completed, .wbf-container .wbf-livemsg-ended,
+.wbf-container .wbf-livemsg-agent-busy, .wbf-container .wbf-livemsg-oops, .wbf-container .wbf-livemsg-timer {
+	display: none;
+}
+.wbf-container.connecting .wbf-livemsg-connecting {
+	display: inherit;
+}
+.wbf-container.connected .wbf-livemsg-connected {
+	display: inherit;
+}
+.wbf-container.verifying .wbf-livemsg-verifying {
+	display: inherit;
+}
+.wbf-container.verification-success .wbf-livemsg-verification-success {
+	display: inherit;
+}
+.wbf-container.in-progress .wbf-livemsg-timer {
+	display: inherit;
+}
+.wbf-container.completed .wbf-livemsg-timer {
+	display: inherit;
+}
+.wbf-container.verification-failed .wbf-livemsg-verification-failed {
+	display: inherit;
+}
+.wbf-container.in-progress .wbf-livemsg-in-progress {
+	display: inherit;
+}
+.wbf-container.completed .wbf-livemsg-completed {
+	display: inherit;
+}
+.wbf-container.ended .wbf-livemsg-ended {
+	display: inherit;
+}
+.wbf-container.agent-busy .wbf-livemsg-agent-busy {
+	display: inherit;
+}
+.wbf-container.oops .wbf-livemsg-oops {
+	display: inherit;
+}
+.wbf-container .wbf-verificationcode {
+	margin-top: 20px;
+	font-size: 1.5em;
+	font-weight: 600;
+	color: crimson;
+}
+/* Theme Peter River */
+.wbf-container.theme-peter-river .wbf-screen {
+	background: rgba(148, 148, 148, 0.5);
+}
+.wbf-container.theme-peter-river .wbf-header {
+	background: #3498db;
+}
+.wbf-container.theme-peter-river .wbf-form .wbf-submit input {
+	background: #3498db;
+}
+.wbf-container.theme-peter-river .wbf-form .wbf-submit input:hover {
+	background: #2980b9;
+}
+.wbf-container.theme-peter-river .wbf-header .wbf-availability.available .wbf-availability-msg {
+	color: rgb(158, 255, 158);
+}
+.wbf-container.theme-peter-river .wbf-header .wbf-availability.available .wbf-availability-icon{
+	background: rgb(158, 255, 158);
+}
+.wbf-container.theme-peter-river .wbf-header .wbf-availability.unavailable .wbf-availability-msg {
+	color: #FF9B91;
+}
+.wbf-container.theme-peter-river .wbf-header .wbf-availability.unavailable .wbf-availability-icon{
+	background: #FF9B91;
+}
+.wbf-container.theme-peter-river .wbf-footer {
+	background: #D7E3EC;
+}
+
+/* Theme Amethyst */
+.wbf-container.theme-amethyst .wbf-screen {
+	background: rgba(148, 148, 148, 0.5);
+}
+.wbf-container.theme-amethyst .wbf-header {
+	background: #9b59b6;
+}
+.wbf-container.theme-amethyst .wbf-form .wbf-submit input {
+	background: #9b59b6;
+}
+.wbf-container.theme-amethyst .wbf-form .wbf-submit input:hover {
+	background: #8e44ad;
+}
+.wbf-container.theme-amethyst .wbf-header .wbf-availability.available .wbf-availability-msg {
+	color: rgb(105, 249, 105);
+}
+.wbf-container.theme-amethyst .wbf-header .wbf-availability.available .wbf-availability-icon{
+	background: rgb(105, 249, 105);
+}
+.wbf-container.theme-amethyst .wbf-header .wbf-availability.unavailable .wbf-availability-msg {
+	color: #FFA69D;
+}
+.wbf-container.theme-amethyst .wbf-header .wbf-availability.unavailable .wbf-availability-icon{
+	background: #FF7769;
+}
+.wbf-container.theme-amethyst .wbf-footer {
+	background: #F6E0FF;
+}
+
+/* Theme Wet Asphalt */
+.wbf-container.theme-wet-asphalt .wbf-screen {
+	background: rgba(148, 148, 148, 0.5);
+}
+.wbf-container.theme-wet-asphalt .wbf-header {
+	background: #34495e;
+}
+.wbf-container.theme-wet-asphalt .wbf-form .wbf-submit input {
+	background: #34495e;
+}
+.wbf-container.theme-wet-asphalt .wbf-form .wbf-submit input:hover {
+	background: #2c3e50;
+}
+.wbf-container.theme-wet-asphalt .wbf-header .wbf-availability.available .wbf-availability-msg {
+	color: rgb(105, 249, 105);
+}
+.wbf-container.theme-wet-asphalt .wbf-header .wbf-availability.available .wbf-availability-icon{
+	background: rgb(105, 249, 105);
+}
+.wbf-container.theme-wet-asphalt .wbf-header .wbf-availability.unavailable .wbf-availability-msg {
+	color: #FFA69D;
+}
+.wbf-container.theme-wet-asphalt .wbf-header .wbf-availability.unavailable .wbf-availability-icon{
+	background: #FF7769;
+}
+.wbf-container.theme-wet-asphalt .wbf-footer {
+	background: #E2E2E2;
+}
+
+/* Theme Emerald */
+.wbf-container.theme-emerald .wbf-screen {
+	background: rgba(148, 148, 148, 0.5);
+}
+.wbf-container.theme-emerald .wbf-header {
+	background: #2ecc71;
+}
+.wbf-container.theme-emerald .wbf-form .wbf-submit input {
+	background: #2ecc71;
+}
+.wbf-container.theme-emerald .wbf-form .wbf-submit input:hover {
+	background: #27ae60;
+}
+.wbf-container.theme-emerald .wbf-header .wbf-availability.available .wbf-availability-msg {
+	color: rgb(213, 255, 213);
+}
+.wbf-container.theme-emerald .wbf-header .wbf-availability.available .wbf-availability-icon{
+	background: rgb(213, 255, 213);
+}
+.wbf-container.theme-emerald .wbf-header .wbf-availability.unavailable .wbf-availability-msg {
+	color: #F95140;
+}
+.wbf-container.theme-emerald .wbf-header .wbf-availability.unavailable .wbf-availability-icon{
+	background: #F95140;
+}
+.wbf-container.theme-emerald .wbf-footer {
+	background: #E6F9EE;
+}
+
+/* Theme Turquoise */
+.wbf-container.theme-turquoise .wbf-screen {
+	background: rgba(148, 148, 148, 0.5);
+}
+.wbf-container.theme-turquoise .wbf-header {
+	background: #1abc9c;
+}
+.wbf-container.theme-turquoise .wbf-form .wbf-submit input {
+	background: #1abc9c;
+}
+.wbf-container.theme-turquoise .wbf-form .wbf-submit input:hover {
+	background: #16a085;
+}
+.wbf-container.theme-turquoise .wbf-header .wbf-availability.available .wbf-availability-msg {
+	color: rgb(213, 255, 213);
+}
+.wbf-container.theme-turquoise .wbf-header .wbf-availability.available .wbf-availability-icon{
+	background: rgb(213, 255, 213);
+}
+.wbf-container.theme-turquoise .wbf-header .wbf-availability.unavailable .wbf-availability-msg {
+	color: #F95140;
+}
+.wbf-container.theme-turquoise .wbf-header .wbf-availability.unavailable .wbf-availability-icon{
+	background: #F95140;
+}
+.wbf-container.theme-turquoise .wbf-footer {
+	background: #ECFAF7;
+}
+
+/* Theme Carrot */
+.wbf-container.theme-carrot .wbf-screen {
+	background: rgba(148, 148, 148, 0.5);
+}
+.wbf-container.theme-carrot .wbf-header {
+	background: #e67e22;
+}
+.wbf-container.theme-carrot .wbf-form .wbf-submit input {
+	background: #e67e22;
+}
+.wbf-container.theme-carrot .wbf-form .wbf-submit input:hover {
+	background: #d35400;
+}
+.wbf-container.theme-carrot .wbf-header .wbf-availability.available .wbf-availability-msg {
+	color: rgb(84, 255, 84);
+}
+.wbf-container.theme-carrot .wbf-header .wbf-availability.available .wbf-availability-icon{
+	background: rgb(84, 255, 84);
+}
+.wbf-container.theme-carrot .wbf-header .wbf-availability.unavailable .wbf-availability-msg {
+	color: #FFCAC5;
+}
+.wbf-container.theme-carrot .wbf-header .wbf-availability.unavailable .wbf-availability-icon{
+	background: #FFCAC5;
+}
+.wbf-container.theme-carrot .wbf-footer {
+	background: #FFF4EA;
+}
+
+/* Theme Alizarin */
+.wbf-container.theme-alizarin .wbf-screen {
+	background: rgba(148, 148, 148, 0.5);
+}
+.wbf-container.theme-alizarin .wbf-header {
+	background: #e74c3c;
+}
+.wbf-container.theme-alizarin .wbf-form .wbf-submit input {
+	background: #e74c3c;
+}
+.wbf-container.theme-alizarin .wbf-form .wbf-submit input:hover {
+	background: #c0392b;
+}
+.wbf-container.theme-alizarin .wbf-header .wbf-availability.available .wbf-availability-msg {
+	color: rgb(84, 255, 84);
+}
+.wbf-container.theme-alizarin .wbf-header .wbf-availability.available .wbf-availability-icon{
+	background: rgb(84, 255, 84);
+}
+.wbf-container.theme-alizarin .wbf-header .wbf-availability.unavailable .wbf-availability-msg {
+	color: #FFCAC5;
+}
+.wbf-container.theme-alizarin .wbf-header .wbf-availability.unavailable .wbf-availability-icon{
+	background: #FFCAC5;
+}
+.wbf-container.theme-alizarin .wbf-footer {
+	background: #FFF0EF;
+}
+
+/* Theme Sunflower */
+.wbf-container.theme-sunflower .wbf-screen {
+	background: rgba(148, 148, 148, 0.5);
+}
+.wbf-container.theme-sunflower .wbf-header {
+	background: #f1c40f;
+}
+.wbf-container.theme-sunflower .wbf-form .wbf-submit input {
+	background: #f1c40f;
+}
+.wbf-container.theme-sunflower .wbf-form .wbf-submit input:hover {
+	background: #f39c12;
+}
+.wbf-container.theme-sunflower .wbf-header .wbf-availability.available .wbf-availability-msg {
+	color: rgb(2, 179, 2);
+}
+.wbf-container.theme-sunflower .wbf-header .wbf-availability.available .wbf-availability-icon{
+	background: rgb(2, 179, 2);
+}
+.wbf-container.theme-sunflower .wbf-header .wbf-availability.unavailable .wbf-availability-msg {
+	color: #FD3D2B;
+}
+.wbf-container.theme-sunflower .wbf-header .wbf-availability.unavailable .wbf-availability-icon{
+	background: #FD3D2B;
+}
+.wbf-container.theme-sunflower .wbf-footer {
+	background: #FDF6D9;
+}
+@media screen and (max-width: 1100px) and  (min-width:767px){
+	.wbf-container {
+		width: 63%; 
+	  	background: #ffffff;
+	 	position: absolute;
+	  	left: 17.5%;	
+	}
+}
+@media screen and (max-width:767px){
+	.wbf-container {
+		width: 90%; 
+	  	background: #ffffff;
+	 	position: absolute;
+	  	left: 5%;	
+	  	top:10px;
+	}
+}
