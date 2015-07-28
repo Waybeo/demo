@@ -75,10 +75,21 @@ html {
 	margin-bottom: 20px;
 	font-size: 0.95em;
 }
-.wbs-form input, .wbs-form select{
+.wbs-form input{
 	display: block;
 	width: 260px;
 	margin:18px 0;
+	height: 35px;
+	-ms-box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+	-webkit-box-sizing:border-box; 
+	box-sizing:border-box;
+	padding: 0 5px;
+}
+.wbs-form select{
+	display: block;
+	width: 260px;
+	margin:18px 0 0 0;
 	height: 35px;
 	-ms-box-sizing:border-box; 
 	-moz-box-sizing:border-box; 
@@ -90,6 +101,7 @@ html {
 	padding-left: 40px;
 }
 .wbs-form input[type="button"] {
+
 	background: blue;
 	color:white;
 	height: 40px;
@@ -103,7 +115,7 @@ html {
 	-moz-transition-duration:0.3s;
 	-o-transition-duration:0.3s;
 	transition-duration:0.3s;
-	margin:0 auto;
+	margin:18px auto 0 auto;
 }
 .wbs-form input[type="button"]:hover {
 	background: rgb(0, 0, 178);
@@ -220,6 +232,7 @@ html {
 	background: #2980b9 url('../img/callme.png') center no-repeat;
 }
 .wbs-container.theme-peter-river input[type="button"] {
+
 	background: #3498db;
 }
 .wbs-container.theme-peter-river input[type="button"]:hover {
