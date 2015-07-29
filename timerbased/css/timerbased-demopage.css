@@ -1,0 +1,87 @@
+body {
+    font-family: "Open Sans", sans-serif;
+}
+header {
+    padding: 5px 30px;
+    background: #f3f3f3;
+    border-bottom: 1px solid #c3c3c3;
+}
+header h2 {
+    float: left;
+    font-weight: 400;
+}
+.downloader {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.downloader a{
+    min-height: 50px;
+    background: rgb(60, 164, 60);
+    color: white;
+    font-size: 1.2rem;
+    padding:10px;
+    text-decoration: none;
+}
+.downloader a:hover {
+    background: rgb(32, 116, 32);
+}
+.chatwatch {
+    position: absolute;
+    bottom: 30px;
+    right: 80px;
+    text-align: center;
+}
+.chatwatch .watchtext {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: crimson;
+}
+.main {
+    height: 300px;
+    padding-top: 100px;
+    margin:0 auto;
+    text-align: center;
+}
+.nav {
+    text-align: center;
+}
+.main input[type='button'] {
+    padding: 20px;
+    font-size: 1.3rem;
+    background: crimson;
+    color: white;
+}
+.main .themeselector {
+    padding: 5px;
+}
+.main .themeselector option{
+    padding: 5px 0;
+}
+.main .themeselector option.peter-river{
+    background: #3498db;
+}
+.main .themeselector option.amethyst{
+    background: #9b59b6;
+}
+.main .themeselector option.wet-asphalt{
+    background: #34495e;
+}
+.main .themeselector option.emerald{
+    background: #2ecc71;
+}
+.main .themeselector option.turquoise{
+    background: #1abc9c;
+}
+.main .themeselector option.alizarin{
+    background: #e74c3c;
+}
+.main .themeselector option.carrot{
+    background: #e67e22;
+}
+.main .themeselector option.sunflower{
+    background: #f1c40f;
+}
+.clear {
+    clear: both;
+}

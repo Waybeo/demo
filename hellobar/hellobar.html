@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Waybeo Calls Demo: Hello Bar</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/intlTelInput.css">
+        <link rel="stylesheet" href="css/hellobar.css">
+        <link rel="stylesheet" href="css/hellobar-demopage.css">
+    </head>
+    <body>
+        <header>
+            <a href="http://waybeo.com" style="float:left"><img src="img/waybeo_logo.png" alt="Waybeo" style="vertical-align: middle; width:90%;"></a>
+            <h2>Call Demos </h2>
+            <div class="downloader"><a href="http://www.waybeo.com/demosexample.zip">Download Demos</a></div>
+            <div class="clear"></div>
+        </header>
+
+
+        <div class="nav">
+            <h2> Hello Bar</h2>
+            <a href="http://www.waybeo.com">Home</a> / <a href="http://www.waybeo.com/examples/">Demos</a> / <a href="javascript:{}">hellobar</a>
+        </div>
+        <section class="main">
+            <h3>Please the color theme for the plugin</h3>
+            <select class="themeselector">
+                <option class="peter-river" value="theme-peter-river">Peter-river</option>
+                <option class="amethyst" value="theme-amethyst">Amethyst</option>
+                <option class="wet-asphalt" value="theme-wet-asphalt">Wet Asphalt</option>
+                <option class="emerald" value="theme-emerald">Emerald</option>
+                <option class="turquoise" value="theme-turquoise">Turquoise</option>
+                <option class="alizarin" value="theme-alizarin">Alizarin</option>
+                <option class="carrot" value="theme-carrot">Carrot</option>
+                <option class="sunflower" value="theme-sunflower">Sun Flower</option>
+
+            </select>
+            <h3>Please click the button below</h3>
+            <div><input type="button" class="clickmehello" value="Talk to us for free" /></div>
+
+        </section>
+        <div class="wbh-container theme-peter-river">
+            <div class="wbh-inputs">
+                <div class="wbh-window">
+                    <div class="wbh-msg">
+                        Talk to our representative now
+                    </div>
+                    <div class="wbh-fields">
+
+                        <input type="tel" class="wbh-tbox" name="mobile" id="hellobarMobile" placeholder="Enter Phone Number">
+                        <input class="wbh-btn" type="button" value="Call Me" id="hellobarCallMe">
+                        <!--<div class="wbh-formerror">Please enter a valid phone number</div>-->
+                    </div> 
+                </div>
+                <div class="wbh-livestatus">
+                    <div class="wbh-livemsg-connecting">
+                        Connecting now...
+                    </div>
+                    <div class="wbh-livemsg-connected">
+                        Connection Established.
+                    </div>
+                    <div class="wbh-livemsg-verifying">
+                        Please verify your number using the code below.
+                        <div class="wbh-verificationcode">
+                            11001
+                        </div>
+                    </div>
+                    <div class="wbh-livemsg-verification-success">
+                        Number verification successful
+                    </div>
+                    <div class="wbh-livemsg-verification-failed">
+                        Number verification failed.
+                    </div>
+                    <div class="wbh-livemsg-in-progress">
+                        Call in progress.
+                    </div>
+                    <div class="wbh-livemsg-completed">
+                        Call Completed Successfully.
+                    </div>
+                    <div class="wbh-livemsg-ended">
+                        Call ended.
+                    </div>
+                    <div class="wbh-livemsg-agent-busy">
+                        Agent busy.
+                    </div>
+                    <div class="wbh-livemsg-oops">
+                        Oops! Something went wrong.
+                    </div>
+                    <div class="wbh-livemsg-timer timer">
+                        00:00:00
+                    </div>
+                </div>
+                <div class="wbh-poweredby"><a href="http://waybeo.com" target="_blank"><img src="img/waybeo-vertical.png"></a></div>
+            </div>
+
+            <div class="wbh-close">x</div>
+        </div>
+
+        <script src="js/jquery-1.9.1.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/intlTelInput.min.js"></script>
+        <script type="text/javascript" src="http://js.waybeo.com/v0.1-beta2/waybeo.min.js"></script>
+        <script type="text/javascript" src="js/hellobar.js"></script>
+    </body>
+
+    <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W7GPJX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W7GPJX');</script>
+<!-- End Google Tag Manager -->
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Waybeo Calls Demo: Timer Based Trigger</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/intlTelInput.css">
+        <link rel="stylesheet" href="css/timerpopup.css">
+        <link rel="stylesheet" href="css/timerbased-demopage.css">
+    </head>
+    <body>
+        <header>
+            <a href="http://waybeo.com" style="float:left"><img src="img/waybeo_logo.png" alt="Waybeo" style="vertical-align: middle; width:90%;"></a>
+            <h2>Call Demos </h2>
+            <div class="downloader"><a href="http://www.waybeo.com/demosexample.zip">Download Demos</a></div>
+            <div class="clear"></div>
+        </header>
+        <div class="nav">
+            <h2> Timer Based Trigger</h2>
+            <a href="http://www.waybeo.com">Home</a> / <a href="http://www.waybeo.com/examples/">Demos</a> / <a href="javascript:{}">timerbased</a>
+        </div>
+        <section class="main">
+            <h3>Please the color theme for the plugin</h3>
+            <select class="themeselector">
+                <option class="peter-river" value="theme-peter-river">Peter-river</option>
+                <option class="amethyst" value="theme-amethyst">Amethyst</option>
+                <option class="wet-asphalt" value="theme-wet-asphalt">Wet Asphalt</option>
+                <option class="emerald" value="theme-emerald">Emerald</option>
+                <option class="turquoise" value="theme-turquoise">Turquoise</option>
+                <option class="alizarin" value="theme-alizarin">Alizarin</option>
+                <option class="carrot" value="theme-carrot">Carrot</option>
+                <option class="sunflower" value="theme-sunflower">Sun Flower</option>
+            </select>
+            <h4 class="loadingmsg" style="font-weight: 300;">Loading in <span class="timermsg">5</span> seconds</h4>
+            <a href="timerbasedpopup.html" class="retrybutton" style="display: none;">Retry</a>
+        </section>
+        <div class="chatwatch">
+            <div class="watchtext">Watch here</div>
+            <img src="img/red-arrow.png">
+        </div>
+        <div class="wbpb-mastercontainer right">
+            <div class="wbpb-container theme-peter-river">
+                <div class="wbpb-header">
+                    <div class="wbpb-mainheader">Speak to our Experts</div>
+                    <div class="wbpb-close">x</div>
+                    <div class="wbpb-clear"></div>
+                </div>
+                <div class="wbpb-form">
+                    <div class="wbpb-window">
+                        <div class="wbpb-msg">
+                            Learn how to use call intelligence and analytics to increase your phone lead generation.
+                        </div>
+                        <div class="wbpb-inputs">
+                            <input type="tel" class="wbpb-tbox" name="mobile" id="timerMobile" placeholder="Enter Phone Number">
+                            <input class="wbpb-btn" type="button" value="Call Me" id="timerCallMe">
+                            <!--<div class="wbpb-formerror">Please enter a valid phone number</div>-->
+
+                        </div>
+                    </div>
+                    <div class="wbpb-livestatus">
+                        <div class="wbpb-livemsg-connecting">
+                            Connecting now...
+                        </div>
+                        <div class="wbpb-livemsg-connected">
+                            Connection Established.
+                        </div>
+                        <div class="wbpb-livemsg-verifying">
+                            Please verify your number using the code below.
+                            <div class="wbpb-verificationcode">
+                                11001
+                            </div>
+                        </div>
+                        <div class="wbpb-livemsg-verification-success">
+                            Number verification successful
+                        </div>
+                        <div class="wbpb-livemsg-verification-failed">
+                            Number verification failed.
+                        </div>
+                        <div class="wbpb-livemsg-in-progress">
+                            Call in progress.
+                        </div>
+                        <div class="wbpb-livemsg-completed">
+                            Call Completed Successfully.
+                        </div>
+                        <div class="wbpb-livemsg-ended">
+                            Call ended.
+                        </div>
+                        <div class="wbpb-livemsg-agent-busy">
+                            Agent busy.
+                        </div>
+                        <div class="wbpb-livemsg-oops">
+                            Oops! Something went wrong.
+                        </div>
+                        <div class="wbpb-livemsg-timer timer">
+                            00:00:00
+                        </div>
+                    </div>
+                </div>
+                <div class="wbpb-footer">
+                    <div class="wbpb-poweredby"><a href="http://waybeo.com" target="_blank"><img src="img/waybeo-horizontal.png"></a></div>
+                    <div class="wbpb-clear"></div>
+                </div>
+            </div>  
+        </div>
+
+        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="js/intlTelInput.min.js"></script>
+        <script type="text/javascript" src="http://js.waybeo.com/v0.1-beta2/waybeo.min.js"></script>
+        <script type="text/javascript" src="js/timerbased.js"></script>
+    </body>
+
+    <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W7GPJX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W7GPJX');</script>
+<!-- End Google Tag Manager -->
+
+</html>
