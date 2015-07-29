@@ -24,6 +24,7 @@ html {
     visibility: hidden;
 }
 .wbpb-mastercontainer.active {
+    z-index: 2147483647;
     visibility: visible;
 }
 .wbpb-container {
