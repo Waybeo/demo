@@ -63,9 +63,9 @@ $(document).ready(function () {
     });
 
     $('#exitCallMe').click(function () {
-	    var _phone = $.trim($("#exitMobile").val()).replace('+', '').replace(' ', '');
-		makecall(_phone);
-	    $('.wbp-container').addClass('connecting');
+        var _phone = $.trim($("#exitMobile").val()).replace('+', '').replace(' ', '');
+        makecall(_phone);
+        $('.wbp-container').addClass('connecting');
     });
 
 });
@@ -91,14 +91,14 @@ function clearStatusExit() {
 }
 
 Waybeo.CTC.Init({
-    hash: '5587b29fa3c7b'
+    hash: '55a650a2c572d'
 });
 
 function makecall(_phone) {
     Waybeo.CTC.MakeCall({
-        'hash': '5587b29fa3c7b',
-        'route_hash': 'nit22331thin123',
-        'callerid_hash': '5587b29fc3e29',
+        'hash': '55a650a2c572d',
+        'route_hash': '55a64035e22c0',
+        'callerid_hash': '55a650a2c7f4a',
         'contact_number': _phone
     }, eventCallBack);
 }

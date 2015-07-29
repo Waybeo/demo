@@ -77,7 +77,7 @@ html {
 }
 .wbp-container.active {
 	opacity: 1;
-	z-index: 10000;
+	z-index: 2147483647;
 	-webkit-transform: translate3d(0,0,0);
 	-moz-transform: translate3d(0,0,0);
 	-o-transform: translate3d(0,0,0);

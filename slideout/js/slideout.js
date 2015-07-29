@@ -31,7 +31,7 @@ $(document).ready(function () {
     });
 
     $('#slideoutCallMe').click(function () {
-		makecall();
+        makecall();
     });
 
 });
@@ -51,22 +51,31 @@ function clearStatusSlide() {
 }
 
 Waybeo.CTC.Init({
-    hash: '5587b29fa3c7b',
+    hash: '55a650a2c572d',
 });
 
 function makecall() {
-    var _phone = $.trim($("#slideoutMobile").val()).replace('+', '').replace(' ', ''),
-		_optionalParams = {
-			name: $('#name').val(),
-			email: $('#email').val(),
-			project: $('#projectSelector').val()
-	};
+    var optionValue = $("#wctcprojectId").val();
+    if (optionValue == "Location X") {
+        var dynamicRoute = '55a674991948b';
+    } else if (optionValue == "Location Y") {
+        var dynamicRoute = '55a674c7d02ce';
+    } else {
+        var dynamicRoute = '';
+    }
+    var _phone = $.trim($("#slideoutMobile").val()).replace('+', '').replace(' ', '');
     Waybeo.CTC.MakeCall({
-        'hash': '5587b29fa3c7b',
-        'route_hash': 'nit22331thin123',
-        'callerid_hash': '5587b29fc3e29',
+        'hash': '55a650a2c572d',
+        'route_hash': dynamicRoute,
+        'callerid_hash': '55a650a2c7f4a',
         'contact_number': _phone,
-		'optional_params': _optionalParams
+        'optional_params': {
+            "Name": $("#wctcname").val(),
+            "Email": $("#wctcemail").val(),
+            "Project": $("#wctcprojectId").val()
+
+        }
+
     }, eventCallBack);
     $('.wbs-container').addClass('connecting');
 }
@@ -129,7 +138,7 @@ function setStatusTimer() {
                 min = '0' + min;
             if (!Math.floor(hour / 10))
                 hour = '0' + hour;
-            $('#timer').text(hour + ':' + min + ':' + sec)
+            $('.timer').text(hour + ':' + min + ':' + sec)
         }, 1000);
     }
 }
