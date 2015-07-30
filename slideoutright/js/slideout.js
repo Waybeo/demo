@@ -1,9 +1,8 @@
 $(document).ready(function () {
-    var telInput = $("#mobile");
+    var telInput = $("#slideoutMobile");
     $.get("http://ipinfo.io", function (response) {
         telInput.intlTelInput({
-            defaultCountry: response.country.toLowerCase(),
-            validationScript: "http://www.bounzd.com/js/swipeutils/isValidNumber.js"
+            defaultCountry: response.country.toLowerCase()
         });
     }, "jsonp");
 
@@ -31,6 +30,9 @@ $(document).ready(function () {
         }
     });
 
+    $('#slideoutCallMe').click(function () {
+        makecall();
+    });
 
 });
 
@@ -49,16 +51,21 @@ function clearStatusSlide() {
 }
 
 Waybeo.CTC.Init({
-    hash: '5587b29fa3c7b',
+    hash: '55a650a2c572d',
 });
 
 function makecall() {
-    var _phone = $.trim($("#mobile").val()).replace('+', '').replace(' ', '');
+    var _phone = $.trim($("#slideoutMobile").val()).replace('+', '').replace(' ', '');
     Waybeo.CTC.MakeCall({
-        'hash': '5587b29fa3c7b',
-        'route_hash': 'nit22331thin123',
-        'callerid_hash': '5587b29fc3e29',
-        'contact_number': _phone
+        'hash': '55a650a2c572d',
+        'route_hash': '55a64035e22c0',
+        'callerid_hash': '55a650a2c7f4a',
+        'contact_number': _phone,
+        'optional_params': {
+            name: $('#wctcname').val(),
+            email: $('#wctcemail').val(),
+            url: $('#wctcurl').val()
+        }
     }, eventCallBack);
     $('.wbs-container').addClass('connecting');
 }
@@ -121,7 +128,7 @@ function setStatusTimer() {
                 min = '0' + min;
             if (!Math.floor(hour / 10))
                 hour = '0' + hour;
-            $('#timer').text(hour + ':' + min + ':' + sec)
+            $('.timer').text(hour + ':' + min + ':' + sec)
         }, 1000);
     }
 }

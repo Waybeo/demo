@@ -47,15 +47,15 @@
                     <div class="wbs-msg">
                         Learn how to use call intelligence and analytics to increase your phone lead generation.
                     </div>
-                    <input type="text" class="wbpb-name"  name="name"  placeholder="First Name">
+                    <input type="text" class="wbpb-name"  name="name" id="wctcname" placeholder="First Name">
                     <!--<div class="wbs-formerror">Please enter a valid Name</div>-->
-                    <input type="email" class="wbpb-email"  name="email"  placeholder="Email">
+                    <input type="email" class="wbpb-email"  name="email" id="wctcemail" placeholder="Email">
                     <!--<div class="wbs-formerror">Please enter a valid email id</div>-->
-                    <input type="tel" class="wbpb-tbox"  name="mobile" id="mobile" placeholder="Phone Number">
+                    <input type="tel" class="wbpb-tbox"  name="mobile" id="slideoutMobile" placeholder="Phone Number">
                     <!--<div class="wbs-formerror">Please enter a valid phone number</div>-->
-                    <input type="url" class="wbpb-url"  name="url"  placeholder="URL">
+                    <input type="url" class="wbpb-url"  name="url" id="wctcurl"  placeholder="URL">
                     <!--<div class="wbs-formerror">Please select an option</div>-->
-                    <input class="wbs-btn" type="button" value="Call Me" onclick="makecall()">
+                    <input class="wbs-btn" type="button" value="Call Me" id="slideoutCallMe">
                 </div>
                 <div class="wbs-livestatus">
                     <div class="wbs-livemsg-connecting">
@@ -91,7 +91,7 @@
                     <div class="wbs-livemsg-oops">
                         Oops! Something went wrong.
                     </div>
-                    <div class="wbs-livemsg-timer" id="timer">
+                    <div class="wbs-livemsg-timer" class="timer">
                         00:00:00
                     </div>
                 </div>
