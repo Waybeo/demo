@@ -142,6 +142,7 @@ html {
 	color: red;
 	margin-top: -18px;
 	float: left;
+	display: none;
 }
 
 /*wbs Status messages */

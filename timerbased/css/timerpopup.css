@@ -130,6 +130,7 @@ html {
     color: red;
     margin-top: 3px;
     float: left;
+    display: none;
 }
 .wbpb-footer {
     padding:15px 20px;
