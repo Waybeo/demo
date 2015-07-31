@@ -51,7 +51,6 @@ $(document).ready(function () {
 });
 
 function showExitPopup() {
-    console.log('hai');
     //Trigger for abandoned visitor popup
     $('.wbf-screen').addClass('active');
     $('.wbf-container').addClass('active');
