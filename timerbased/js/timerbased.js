@@ -114,9 +114,11 @@ function eventCallBack(event, data) {
             $('.wbpb-container').addClass('completed');
             clearInterval(timer);
             break;
+        case 'ERROR':
+            $('.wbf-container').addClass('oops');
+            clearInterval(timer);
+            break;
         default:
-            $('.wbpb-container').addClass('in-progress');
-            setStatusTimer();
             break;
     }
 }
