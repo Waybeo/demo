@@ -100,7 +100,13 @@ function eventCallBack(event, data) {
             $('.wbh-container').addClass('completed');
             clearInterval(timer);
             break;
-        case 'ERROR':
+        case 'VALIDATION_ERROR':
+            if (data.errorCode && data.errorCode == 902) {
+                $('.wbf-formerror').show();
+            }
+            clearInterval(timer);
+            break;
+        case 'ORIGINATE_ERROR':
             $('.wbf-container').addClass('oops');
             clearInterval(timer);
             break;
