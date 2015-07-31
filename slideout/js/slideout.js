@@ -119,12 +119,12 @@ function eventCallBack(event, data) {
             break;
         case 'VALIDATION_ERROR':
             if (data.errorCode && data.errorCode == 902) {
-                $('.wbf-formerror').show();
+                $('.wbs-formerror').show();
             }
             clearInterval(timer);
             break;
         case 'ORIGINATE_ERROR':
-            $('.wbf-container').addClass('oops');
+            $('.wbs-container').addClass('oops');
             clearInterval(timer);
             break;
         default:
