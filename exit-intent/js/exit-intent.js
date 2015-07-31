@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var telInput = $("#exitMobile");
+    var telInput = $("#normalMobile");
     $.get("http://ipinfo.io", function (response) {
         telInput.intlTelInput({
             defaultCountry: response.country.toLowerCase()
@@ -17,43 +17,23 @@ $(document).ready(function () {
             $('.loadingmsg').html('Now, try to close this window');
             $('.exitwatch').css('display', 'inherit');
             clearInterval(interval);
-            //Init exitintent
-            Waybeo.CTC.Init({
-                exitIntent: {
-                    aggressive: true,
-                    timer: 0,
-                    trigger: showExitPopup
-                }
-            });
         }
     }, 1000);
 
-    $('#reset').click(function () {
-        $('#status').removebounzd();
-        $('#name, #phone, #email').val(' ');
+    //Init exitintent
+    Waybeo.CTC.Init({
+        exitIntent: {
+            aggressive: true,
+            timer: 5,
+            trigger: showExitPopup
+        }
     });
-
-    $('.wbp-actions .yesconnect').click(function () {
-        $(this).parent().removeClass('active');
-        $('.wbp-window').addClass('active');
-    });
-    $('.wbp-actions .noconnect').click(function () {
-        $('.wbp-screen').removeClass('active');
-        $('.wbp-container').removeClass('active');
-        $('.wbp-window').removeClass('active');
-        $('.wbp-actions').addClass('active');
+    $('.wbf-close').click(function () {
+        $('.wbf-screen').removeClass('active');
+        $('.wbf-window').removeClass('active');
+        $('.wbf-actions').addClass('active');
         $('.retrybutton').css('display', 'inherit');
-        $('.wbp-container').removeClass('active').delay('600').queue(function () {
-            $.dequeue(this);
-            clearStatusExit();
-        });
-    });
-    $('.wbp-close').click(function () {
-        $('.wbp-screen').removeClass('active');
-        $('.wbp-window').removeClass('active');
-        $('.wbp-actions').addClass('active');
-        $('.retrybutton').css('display', 'inherit');
-        $('.wbp-container').removeClass('active').delay('600').queue(function () {
+        $('.wbf-container').removeClass('active').delay('600').queue(function () {
             $.dequeue(this);
             clearStatusExit();
             if (timer) {
@@ -62,22 +42,23 @@ $(document).ready(function () {
         });
     });
 
-    $('#exitCallMe').click(function () {
-        var _phone = $.trim($("#exitMobile").val()).replace('+', '').replace(' ', '');
+    $('#normalCallMe').click(function () {
+        var _phone = $.trim($("#normalMobile").val()).replace('+', '').replace(' ', '');
         makecall(_phone);
-        $('.wbp-container').addClass('connecting');
+        $('.wbf-container').addClass('connecting');
     });
 
 });
 
 function showExitPopup() {
+    console.log('hai');
     //Trigger for abandoned visitor popup
-    $('.wbp-screen').addClass('active');
-    $('.wbp-container').addClass('active');
+    $('.wbf-screen').addClass('active');
+    $('.wbf-container').addClass('active');
 }
 
 function clearStatusExit() {
-    $('.wbp-container').removeClass('connecting')
+    $('.wbf-container').removeClass('connecting')
             .removeClass('connected')
             .removeClass('verifying')
             .removeClass('verification-success')
@@ -109,39 +90,39 @@ function eventCallBack(event, data) {
     switch (event) {
         case 'CAPTCHA':
             captcha = data.code;
-            $('.wbp-container').addClass('connecting');
+            $('.wbf-container').addClass('connecting');
             break;
         case 'ORIGINATE_ERROR':
-            $('.wbp-container').addClass('wbp-livemsg-oops');
+            $('.wbf-container').addClass('wbf-livemsg-oops');
             break;
         case 'DIALING':
-            $('.wbp-container').addClass('connected');
+            $('.wbf-container').addClass('connected');
             break;
         case 'VERIFICATION_IN_PROGRESS':
-            $('.wbp-container').addClass('verifying');
-            $('.wbp-verificationcode').text(captcha);
+            $('.wbf-container').addClass('verifying');
+            $('.wbf-verificationcode').text(captcha);
             break;
         case 'VERIFIED':
-            $('.wbp-container').addClass('verification-success');
+            $('.wbf-container').addClass('verification-success');
             setTimeout(function () {
-                $('.wbp-container').removeClass('verification-success');
-                $('.wbp-container').addClass('in-progress');
+                $('.wbf-container').removeClass('verification-success');
+                $('.wbf-container').addClass('in-progress');
             }, 1000);
             setStatusTimer();
             break;
         case 'AGENT_BUSY':
-            $('.wbp-container').addClass('agent-busy');
+            $('.wbf-container').addClass('agent-busy');
             break;
         case 'INPROGRESS':
-            $('.wbp-container').addClass('in-progress');
+            $('.wbf-container').addClass('in-progress');
             setStatusTimer();
             break;
         case 'COMPLETED':
-            $('.wbp-container').addClass('completed');
+            $('.wbf-container').addClass('completed');
             clearInterval(timer);
             break;
         default:
-            $('.wbp-container').addClass('in-progress');
+            $('.wbf-container').addClass('in-progress');
             break;
     }
 }

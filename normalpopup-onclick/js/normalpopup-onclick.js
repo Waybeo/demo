@@ -12,10 +12,6 @@ $(document).ready(function () {
         });
         $('.wbf-container').addClass($(this).val());
     }).trigger("change");
-    $('#reset').click(function () {
-        $('#status').removebounzd();
-        $('#name, #phone, #email').val(' ');
-    });
     $('.clickme').click(function () {
         $('.wbf-screen').addClass('active');
         $('.wbf-container').addClass('active');
