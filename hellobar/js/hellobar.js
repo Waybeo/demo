@@ -53,7 +53,6 @@ Waybeo.CTC.Init({
 });
 
 function makecall(_phone) {
-    var _phone = $.trim($("#hellobarMobile").val()).replace('+', '').replace(' ', '');
     Waybeo.CTC.MakeCall({
         'hash': '55a650a2c572d',
         'route_hash': '55a64035e22c0',
