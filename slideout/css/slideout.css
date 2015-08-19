@@ -38,13 +38,14 @@ html {
 	-moz-transform: translate3d(-300px,0,0);
 	-o-transform: translate3d(-300px,0,0);
 	transform: translate3d(-300px,0,0);
+	z-index: 2147483647;
+	overflow: hidden;
 }
 .wbs-container.active {
 	-webkit-transform: translate3d(0,0,0);
 	-moz-transform: translate3d(0,0,0);
 	-o-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
-	z-index: 2147483647;
 } 
 .wbs-switch {
 	margin: 0;
@@ -148,7 +149,7 @@ html {
 
 /*wbs Status messages */
 .wbs-container .wbs-window{
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 .wbs-container .wbs-livestatus{
 	visibility: hidden;
