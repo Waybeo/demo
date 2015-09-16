@@ -18,8 +18,8 @@ $(document).ready(function () {
     });
     $('#normalCallMe').click(function () {
         var _phone = $.trim($("#normalMobile").val()).replace('+', '').replace(' ', '');
-        makecall(_phone);
         $('.wbf-container').addClass('connecting');
+        makecallNormal(_phone);
     });
     $('.wbf-close').click(function () {
         $('.wbf-screen').removeClass('active');
@@ -39,7 +39,7 @@ Waybeo.CTC.Init({
 });
 
 //makeCall
-function makecall(_phone) {
+function makecallNormal(_phone) {
     //Initiate CTC Call
     Waybeo.CTC.MakeCall({
         'hash': '55a650a2c572d',
