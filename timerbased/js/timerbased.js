@@ -45,8 +45,8 @@ $(document).ready(function () {
     });
     $('#timerCallMe').click(function () {
         var _phone = $.trim($("#timerMobile").val()).replace('+', '').replace(' ', '');
-        makecall(_phone);
         $('.wbpb-container').addClass('connecting');
+        makecallTimer(_phone);
     });
 });
 
@@ -68,7 +68,7 @@ Waybeo.CTC.Init({
     hash: '55a650a2c572d'
 });
 
-function makecall(_phone) {
+function makecallTimer(_phone) {
     Waybeo.CTC.MakeCall({
         'hash': '55a650a2c572d',
         'route_hash': '55a64035e22c0',
