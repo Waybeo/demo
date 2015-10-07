@@ -28,12 +28,12 @@ $(document).ready(function () {
             trigger: showExitPopup
         }
     });
-    $('.wbf-close').click(function () {
-        $('.wbf-screen').removeClass('active');
-        $('.wbf-window').removeClass('active');
-        $('.wbf-actions').addClass('active');
+    $('.wbp-close').click(function () {
+        $('.wbp-screen').removeClass('active');
+        $('.wbp-window').removeClass('active');
+        $('.wbp-actions').addClass('active');
         $('.retrybutton').css('display', 'inherit');
-        $('.wbf-container').removeClass('active').delay('600').queue(function () {
+        $('.wbp-container').removeClass('active').delay('600').queue(function () {
             $.dequeue(this);
             clearStatusExit();
             if (timer) {
@@ -44,20 +44,20 @@ $(document).ready(function () {
 
     $('#normalCallMe').click(function () {
         var _phone = $.trim($("#normalMobile").val()).replace('+', '').replace(' ', '');
-        makecall(_phone);
-        $('.wbf-container').addClass('connecting');
+        makecallExit(_phone);
+        $('.wbp-container').addClass('connecting');
     });
 
 });
 
 function showExitPopup() {
     //Trigger for abandoned visitor popup
-    $('.wbf-screen').addClass('active');
-    $('.wbf-container').addClass('active');
+    $('.wbp-screen').addClass('active');
+    $('.wbp-container').addClass('active');
 }
 
 function clearStatusExit() {
-    $('.wbf-container').removeClass('connecting')
+    $('.wbp-container').removeClass('connecting')
             .removeClass('connected')
             .removeClass('verifying')
             .removeClass('verification-success')
@@ -74,60 +74,60 @@ Waybeo.CTC.Init({
     hash: '55a650a2c572d'
 });
 
-function makecall(_phone) {
+function makecallExit(_phone) {
     Waybeo.CTC.MakeCall({
         'hash': '55a650a2c572d',
         'route_hash': '55a64035e22c0',
         'callerid_hash': '55a650a2c7f4a',
         'contact_number': _phone
-    }, eventCallBack);
+    }, eventCallBackExit);
 }
 
 var captcha = '', timer = '';
-function eventCallBack(event, data) {
+function eventCallBackExit(event, data) {
     clearStatusExit();
     switch (event) {
         case 'CAPTCHA':
             captcha = data.code;
-            $('.wbf-container').addClass('connecting');
+            $('.wbp-container').addClass('connecting');
             break;
         case 'ORIGINATE_ERROR':
-            $('.wbf-container').addClass('wbf-livemsg-oops');
+            $('.wbp-container').addClass('wbp-livemsg-oops');
             break;
         case 'DIALING':
-            $('.wbf-container').addClass('connected');
+            $('.wbp-container').addClass('connected');
             break;
         case 'VERIFICATION_IN_PROGRESS':
-            $('.wbf-container').addClass('verifying');
-            $('.wbf-verificationcode').text(captcha);
+            $('.wbp-container').addClass('verifying');
+            $('.wbp-verificationcode').text(captcha);
             break;
         case 'VERIFIED':
-            $('.wbf-container').addClass('verification-success');
+            $('.wbp-container').addClass('verification-success');
             setTimeout(function () {
-                $('.wbf-container').removeClass('verification-success');
-                $('.wbf-container').addClass('in-progress');
+                $('.wbp-container').removeClass('verification-success');
+                $('.wbp-container').addClass('in-progress');
             }, 1000);
             setStatusTimer();
             break;
         case 'AGENT_BUSY':
-            $('.wbf-container').addClass('agent-busy');
+            $('.wbp-container').addClass('agent-busy');
             break;
         case 'INPROGRESS':
-            $('.wbf-container').addClass('in-progress');
+            $('.wbp-container').addClass('in-progress');
             setStatusTimer();
             break;
         case 'COMPLETED':
-            $('.wbf-container').addClass('completed');
+            $('.wbp-container').addClass('completed');
             clearInterval(timer);
             break;
         case 'VALIDATION_ERROR':
             if (data.errorCode && data.errorCode == 902) {
-                $('.wbf-formerror').show();
+                $('.wbp-formerror').show();
             }
             clearInterval(timer);
             break;
         case 'ORIGINATE_ERROR':
-            $('.wbf-container').addClass('oops');
+            $('.wbp-container').addClass('oops');
             clearInterval(timer);
             break;
         default:
