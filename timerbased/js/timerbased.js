@@ -19,8 +19,6 @@ $(document).ready(function () {
         if (timerlimit) {
             $(".timermsg").html(timerlimit);
         } else {
-            $('.wbpb-mastercontainer').addClass('active');
-            $('.wbpb-container').addClass('active');
             $('.loadingmsg').html('Loaded');
             $('.retrybutton').css('display', 'inherit');
             clearInterval(interval);
@@ -50,6 +48,11 @@ $(document).ready(function () {
     });
 });
 
+function showTimerPopup() {
+    $('.wbpb-mastercontainer').addClass('active');
+    $('.wbpb-container').addClass('active');
+}
+
 function clearStatusbottom() {
     $('.wbpb-container').removeClass('connecting')
             .removeClass('connected')
@@ -65,7 +68,12 @@ function clearStatusbottom() {
 }
 
 Waybeo.CTC.Init({
-    hash: '55a650a2c572d'
+    hash: '55a650a2c572d',
+    autoPopup: {
+        aggressive: true,
+        timer: 5,
+        trigger: showTimerPopup
+    }
 });
 
 function makecallTimer(_phone) {

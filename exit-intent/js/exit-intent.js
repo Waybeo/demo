@@ -44,8 +44,8 @@ $(document).ready(function () {
 
     $('#normalCallMe').click(function () {
         var _phone = $.trim($("#normalMobile").val()).replace('+', '').replace(' ', '');
-        makecallExit(_phone);
         $('.wbp-container').addClass('connecting');
+        makecallExit(_phone);
     });
 
 });
