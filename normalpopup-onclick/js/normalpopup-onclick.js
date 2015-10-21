@@ -13,8 +13,7 @@ $(document).ready(function () {
         $('.wbf-container').addClass($(this).val());
     }).trigger("change");
     $('.clickme').click(function () {
-        $('.wbf-screen').addClass('active');
-        $('.wbf-container').addClass('active');
+        showNormalPopup();
     });
     $('#normalCallMe').click(function () {
         var _phone = $.trim($("#normalMobile").val()).replace('+', '').replace(' ', '');
@@ -32,6 +31,11 @@ $(document).ready(function () {
         });
     });
 });
+
+var showNormalPopup = function() {
+    $('.wbf-screen').addClass('active');
+    $('.wbf-container').addClass('active');
+}
 
 //Init CTC
 Waybeo.CTC.Init({
@@ -72,9 +76,6 @@ function eventCallBack(event, data) {
         case 'CAPTCHA':
             captcha = data.code;
             $('.wbf-container').addClass('connecting');
-            break;
-        case 'ORIGINATE_ERROR':
-            $('.wbf-container').addClass('wbf-livemsg-oops');
             break;
         case 'DIALING':
             $('.wbf-container').addClass('connected');
