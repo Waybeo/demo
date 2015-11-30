@@ -4,13 +4,13 @@
         <title>Waybeo Calls Demo: Normal Popup - onclick()</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!-- Telephone input with country flag style -->
-        <link rel="stylesheet" href="css/intlTelInput.css">
-        <link rel="stylesheet" href="css/normalpop.css">
-        <link rel="stylesheet" href="css/normalpopup-onclick-demopage.css">
+        <link rel="stylesheet" href="waybeolib/css/intlTelInput.css">
+        <link rel="stylesheet" href="waybeolib/css/normalpop.css">
+        <link rel="stylesheet" href="assets/normalpopup-onclick-demopage.css">
     </head>
     <body>
         <header>
-            <a href="http://waybeo.com" style="float:left"><img src="img/waybeo_logo.png" alt="Waybeo" style="vertical-align: middle; width:90%;"></a>
+            <a href="http://waybeo.com" style="float:left"><img src="assets/waybeo_logo.png" alt="Waybeo" style="vertical-align: middle; width:90%;"></a>
             <h2>Call Demos </h2>
             <div class="downloader"><a href="https://github.com/Waybeo/demo/archive/master.zip">Download Demos</a></div>
             <div class="clear"></div>
@@ -36,6 +36,7 @@
                 <input type="button" class="clickme" value="Talk to us for free" />
             </div>
         </section>
+        <!-- Normal popup form -->
         <div class="wbf-screen">
             <!--Theme classes: theme-peter-river, theme-amethyst, theme-wet-asphalt, theme-emerald,
             theme-turquoise, theme-carrot, theme-alizarin, theme-sunflower -->
@@ -104,23 +105,30 @@
                         </div>
                     </div>
                 </div>
-                <!--End wbf-form-->
                 <div class="wbf-footer">
-                    <div class="wbf-poweredby"><a href="http://waybeo.com" target="_blank"><img src="img/waybeo-horizontal.png"></a></div>
+                    <div class="wbf-poweredby"><a href="http://waybeo.com" target="_blank"><img src="waybeolib/img/waybeo-horizontal.png"></a></div>
                     <div class="wbf-close">Close</div>
                     <div class="wbf-clear"></div>
                 </div>
-                <!--End wbf-footer-->
             </div>
-            <!--End wbf-container-->
         </div>
+        <!-- End Normal popup form -->
 
-        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
-        <!-- Telephone input with country flag -->
-        <script type="text/javascript" src="js/intlTelInput.min.js"></script>
         <!-- Waybeo.js -->
         <script type="text/javascript" src="http://js.waybeo.com/v0.1-beta2/waybeo.min.js"></script>
+        <!-- Jquery 1.9.1 -->
+        <script type="text/javascript" src="waybeolib/js/jquery-1.9.1.min.js"></script>
+        <!-- Telephone input with country flag -->
+        <script type="text/javascript" src="waybeolib/js/intlTelInput.min.js"></script>
         <!-- Waybeo.js customization -->
-        <script type="text/javascript" src="js/normalpopup-onclick.js"></script>
+        <script type="text/javascript" src="waybeolib/js/normalpopup-onclick.js"></script>
+        <script type="text/javascript">
+            $('.themeselector').change(function () {
+                $('.themeselector option').each(function () {
+                    $('.wbf-container').removeClass($(this).val());
+                });
+                $('.wbf-container').addClass($(this).val());
+            }).trigger("change");
+        </script>
     </body>
 </html>

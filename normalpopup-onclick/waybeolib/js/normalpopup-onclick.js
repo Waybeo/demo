@@ -1,17 +1,15 @@
 //Init Form fields
 $(document).ready(function () {
     var telInput = $("#normalMobile");
-    $.get("http://ipinfo.io", function (response) {
-        telInput.intlTelInput({
-            defaultCountry: response.country.toLowerCase()
-        });
-    }, "jsonp");
-    $('.themeselector').change(function () {
-        $('.themeselector option').each(function () {
-            $('.wbf-container').removeClass($(this).val());
-        });
-        $('.wbf-container').addClass($(this).val());
-    }).trigger("change");
+    telInput.intlTelInput({
+        defaultCountry: 'in'
+    });
+    // Uncomment this to set flag based on visitor location using 'ipinfo.io'.
+    // $.get("http://ipinfo.io", function (response) {
+    //     telInput.intlTelInput({
+    //         defaultCountry: response.country.toLowerCase()
+    //     });
+    // }, "jsonp");
     $('.clickme').click(function () {
         showNormalPopup();
     });
