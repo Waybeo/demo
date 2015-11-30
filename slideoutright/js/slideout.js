@@ -31,7 +31,7 @@ $(document).ready(function () {
     });
 
     $('#slideoutCallMe').click(function () {
-        makecall();
+        slideoutMakecall();
     });
 
 });
@@ -54,7 +54,7 @@ Waybeo.CTC.Init({
     hash: '55a650a2c572d',
 });
 
-function makecall() {
+function slideoutMakecall() {
     var _phone = $.trim($("#slideoutMobile").val()).replace('+', '').replace(' ', '');
     Waybeo.CTC.MakeCall({
         'hash': '55a650a2c572d',
@@ -66,12 +66,12 @@ function makecall() {
             email: $('#wctcemail').val(),
             url: $('#wctcurl').val()
         }
-    }, eventCallBack);
+    }, slideoutEventCallBack);
     $('.wbs-container').addClass('connecting');
 }
 
 var captcha = '', timer = '';
-function eventCallBack(event, data) {
+function slideoutEventCallBack(event, data) {
     clearStatusSlide();
     switch (event) {
         case 'CAPTCHA':

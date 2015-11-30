@@ -5,6 +5,7 @@ $(document).ready(function () {
         defaultCountry: 'in'
     });
     // Uncomment this to set flag based on visitor location using 'ipinfo.io'.
+    // ** fails over https:// **
     // $.get("http://ipinfo.io", function (response) {
     //     telInput.intlTelInput({
     //         defaultCountry: response.country.toLowerCase()
