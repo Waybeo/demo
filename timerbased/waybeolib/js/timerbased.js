@@ -68,7 +68,7 @@ function clearStatusbottom() {
 }
 
 Waybeo.CTC.Init({
-    hash: '55a650a2c572d',
+    hash: '566facd56bf93',
     autoPopup: {
         aggressive: true,
         timer: 5,

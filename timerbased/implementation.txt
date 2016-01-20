@@ -1,0 +1,46 @@
+Implementation
+==============
+
+Step 1: Add waybeolib folder into your site.
+
+Step 2: Open 'timerbasedpopup.html' file, copy 'Timer popup form' html and paste into your site html file.
+		( <!-- Timer popup form --> to <!-- End Timer popup form --> )
+
+Step 3: Add form styles.
+        <link rel="stylesheet" href="waybeolib/css/intlTelInput.css">
+        <link rel="stylesheet" href="waybeolib/css/timerpopup.css">
+
+Step 4: Add waybeo.js javascript api.
+        <script type="text/javascript" src="http://js.waybeo.com/v0.1-beta2/waybeo.min.js"></script>
+
+Step 5: Add JQuery only if its not added.
+        <script type="text/javascript" src="waybeolib/js/jquery-1.9.1.min.js"></script>
+
+* If you have a jquery and its version is below 1.7.2 jump to 'Loding two jquery versions' part.
+
+Step 6: Add form Javascript files.
+        <script type="text/javascript" src="waybeolib/js/intlTelInput.min.js"></script>
+        <script type="text/javascript" src="waybeolib/js/timerbased.js"></script>
+
+Step 7: Open 'waybeolib/js/timerbased.js' and replace hash values with yours. Check read me for more details.
+
+Thats all :)
+
+
+
+Loding two jquery versions
+******** If your jquery version is below 1.7.2 ********
+	Step 5: Load a different Jquery file.
+		<script type="text/javascript" src="waybeolib/js/noconflict/jquery-1.9.1.min.js"></script>
+
+	Step 6: Load these scripts
+	    <script type="text/javascript" src="waybeolib/js/noconflict/intlTelInput.min.js"></script>
+	    <script type="text/javascript" src="waybeolib/js/noconflict/timerbased.js"></script>
+
+    Step 7: Open 'waybeolib/js/noconflict/timerbased.js' and replace hash values with yours. Check read me for more details.
+
+	Thats it. :)
+	You have successfully loaded two jquery versions!!
+	Use 'jq191' instead of '$' if you need 1.9.1 version in future.
+
+Feel free to contact the customer support.
