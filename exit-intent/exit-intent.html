@@ -3,13 +3,13 @@
     <head>
         <title>Waybeo Calls Demo: Exit Intent Trigger</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="css/intlTelInput.css">
-        <link rel="stylesheet" href="css/exitpopup.css">
-        <link rel="stylesheet" href="css/exit-intent-demopage.css">
+        <link rel="stylesheet" href="waybeolib/css/intlTelInput.css">
+        <link rel="stylesheet" href="waybeolib/css/exitpopup.css">
+        <link rel="stylesheet" href="assets/exit-intent-demopage.css">
     </head>
     <body>
         <header>
-            <a href="http://waybeo.com" style="float:left"><img src="img/waybeo_logo.png" alt="Waybeo" style="vertical-align: middle; width:90%;"></a>
+            <a href="http://waybeo.com" style="float:left"><img src="assets/waybeo_logo.png" alt="Waybeo" style="vertical-align: middle; width:90%;"></a>
             <h2>Call Demos </h2>
             <div class="downloader"><a href="https://github.com/Waybeo/demo/archive/master.zip">Download Demos</a></div>
             <div class="clear"></div>
@@ -27,6 +27,7 @@
             <a href="exit-intent.html" class="retrybutton" style="display: none;">Retry</a>
 
         </section>
+        <!-- Normal popup form -->
         <div class="wbp-screen">
             <!--Theme classes: theme-peter-river, theme-amethyst, theme-wet-asphalt, theme-emerald,
             theme-turquoise, theme-carrot, theme-alizarin, theme-sunflower -->
@@ -96,7 +97,7 @@
                 </div>
                 <!--End wbp-form-->
                 <div class="wbp-footer">
-                    <div class="wbp-poweredby"><a href="http://waybeo.com" target="_blank"><img src="img/waybeo-horizontal.png"></a></div>
+                    <div class="wbp-poweredby"><a href="http://waybeo.com" target="_blank"><img src="waybeolib/img/waybeo-horizontal.png"></a></div>
                     <div class="wbp-close">Close</div>
                     <div class="wbp-clear"></div>
                 </div>
@@ -104,11 +105,25 @@
             </div>
             <!--End wbp-container-->
         </div>
+        <!-- End Normal popup form -->
 
-
-        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
-        <script type="text/javascript" src="js/intlTelInput.min.js"></script>
+        <!-- Waybeo.js -->
         <script type="text/javascript" src="http://js.waybeo.com/v0.1-beta2/waybeo.min.js"></script>
-        <script type="text/javascript" src="js/exit-intent.js"></script>
+        <!-- Jquery 1.9.1 -->
+        <script type="text/javascript" src="waybeolib/js/jquery-1.9.1.min.js"></script>
+        <!-- Telephone input with country flag -->
+        <script type="text/javascript" src="waybeolib/js/intlTelInput.min.js"></script>
+        <!-- Waybeo.js customization -->
+        <script type="text/javascript" src="waybeolib/js/exit-intent.js"></script>
+
+        <!-- Demo theme update -->
+        <script type="text/javascript">
+            $('.themeselector').change(function () {
+                $('.themeselector option').each(function () {
+                    $('.wbf-container').removeClass($(this).val());
+                });
+                $('.wbf-container').addClass($(this).val());
+            }).trigger("change");
+        </script>
     </body>
-</html>
+</html> 
