@@ -6,17 +6,6 @@ $(document).ready(function () {
         });
     }, "jsonp");
 
-    $('.themeselector').change(function () {
-        $('.themeselector option').each(function () {
-            $('.wbs-container').removeClass($(this).val());
-        });
-        $('.wbs-container').addClass($(this).val());
-    }).trigger("change");
-    $('#reset').click(function () {
-        $('#status').removebounzd();
-        $('#name, #phone, #email').val(' ');
-    });
-
     $('.wbs-switch').click(function () {
         $('.wbs-container').toggleClass('active');
         if (!$('.wbs-container').hasClass('active')) {
@@ -56,6 +45,7 @@ Waybeo.CTC.Init({
 
 function slideoutMakecall() {
     var _phone = $.trim($("#slideoutMobile").val()).replace('+', '').replace(' ', '');
+    $('.wbs-container').addClass('connecting');
     Waybeo.CTC.MakeCall({
         'hash': '55a650a2c572d',
         'route_hash': '55a64035e22c0',
@@ -67,7 +57,6 @@ function slideoutMakecall() {
             url: $('#wctcurl').val()
         }
     }, slideoutEventCallBack);
-    $('.wbs-container').addClass('connecting');
 }
 
 var captcha = '', timer = '';

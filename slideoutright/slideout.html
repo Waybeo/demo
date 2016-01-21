@@ -109,5 +109,15 @@
         <script type="text/javascript" src="waybeolib/js/intlTelInput.min.js"></script>
         <!-- Waybeo.js customization -->
         <script type="text/javascript" src="waybeolib/js/slideout.js"></script>
+
+        <!-- For demo theme update -->
+        <script type="text/javascript">
+            $('.themeselector').change(function () {
+                $('.themeselector option').each(function () {
+                    $('.wbs-container').removeClass($(this).val());
+                });
+                $('.wbs-container').addClass($(this).val());
+            }).trigger("change");
+        </script>
     </body>
 </html>
