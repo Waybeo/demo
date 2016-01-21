@@ -3,12 +3,12 @@ Implementation
 
 Step 1: Add waybeolib folder into your site.
 
-Step 2: Open 'exit-intent.html' file, copy 'Normal popup form' html and paste into your site html file.
-		( <!-- Normal popup form --> to <!-- End Normal popup form --> )
+Step 2: Open 'slideout.html' file, copy 'Normal popup form' html and paste into your site html file.
+		( <!-- Slideout popup form --> to <!-- End slideout popup form --> )
 
 Step 3: Add form styles.
         <link rel="stylesheet" href="waybeolib/css/intlTelInput.css">
-        <link rel="stylesheet" href="waybeolib/css/exitpopup.css">
+        <link rel="stylesheet" href="waybeolib/css/slideout.css">
 
 Step 4: Add waybeo.js javascript api.
         <script type="text/javascript" src="http://js.waybeo.com/v0.1-beta2/waybeo.min.js"></script>
@@ -20,9 +20,9 @@ Step 5: Add JQuery only if its not added.
 
 Step 6: Add form Javascript files.
         <script type="text/javascript" src="waybeolib/js/intlTelInput.min.js"></script>
-        <script type="text/javascript" src="waybeolib/js/exit-intent.js"></script>
+        <script type="text/javascript" src="waybeolib/js/slideout.js"></script>
 
-Step 7: Open 'waybeolib/js/exit-intent.js' and replace hash values with yours. Check read me for more details.
+Step 7: Open 'waybeolib/js/slideout.js' and replace hash values with yours. Check read me for more details.
 
 Thats all :)
 
@@ -35,9 +35,9 @@ Loding two jquery versions
 
 	Step 6: Load these scripts
 	    <script type="text/javascript" src="waybeolib/js/noconflict/intlTelInput.min.js"></script>
-	    <script type="text/javascript" src="waybeolib/js/noconflict/exit-intent.js"></script>
+	    <script type="text/javascript" src="waybeolib/js/noconflict/slideout.js"></script>
 
-    Step 7: Open 'waybeolib/js/noconflict/exit-intent.js' and replace hash values with yours. Check read me for more details.
+    Step 7: Open 'waybeolib/js/noconflict/slideout.js' and replace hash values with yours. Check read me for more details.
 
 	Thats it. :)
 	You have successfully loaded two jquery versions!!
